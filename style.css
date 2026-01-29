@@ -1,74 +1,90 @@
+/* Globale Einstellungen */
 body {
+    background-color: #E3E3E3; /* Vorgabe Hintergrundfarbe Seite */
+    font-family: 'Bahnschrift', sans-serif; /* Vorgabe Fließtext & Navi */
     margin: 0;
-    background-color: #E3E3E3;
-    font-family: Bahnschrift, Arial, sans-serif;
+    padding: 0;
 }
 
-/* HEADER */
+/* Header & Logo */
 header {
     position: relative;
     padding: 20px;
+    background-color: white;
 }
 
+.logo {
+    position: absolute; /* Positionierung rechts oben */
+    top: 10px;
+    right: 20px;
+    height: 60px;
+}
+
+/* Navigation */
+nav {
+    background-color: #007baf; /* Vorgabe Hintergrundfarbe Navi */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hauptinhalt */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Überschriften */
 h1 {
-    font-family: "Calisto MT", serif;
+    font-family: 'Calisto MT', serif; /* Vorgabe Schriftart Überschriften */
     color: #007baf;
     margin: 0;
 }
 
-/* LOGO */
-.logo {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    height: 50px;
-}
-
-/* NAVIGATION */
-nav {
-    background-color: #007baf;
-    padding: 8px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-/* INHALT */
-main {
-    padding: 20px;
-}
-
 h2 {
-    font-family: "Calisto MT", serif;
+    font-family: 'Calisto MT', serif;
     color: #007baf;
 }
 
-/* BILDER */
-.bilderreihe {
-    text-align: center;
-    margin: 15px 0;
+.blue-bg {
+    background-color: #007baf;
+    color: white;
+    padding: 5px 10px;
 }
 
-.bilderreihe img {
-    margin: 5px;
+/* Bilder-Layout: 3 nebeneinander */
+.image-row {
+    display: flex;
+    justify-content: center; /* Zentriert die Bildergruppe */
+    gap: 15px; /* Abstand zwischen den Bildern */
+    margin: 20px 0;
 }
 
-/* ABSCHLUSS */
-.abschluss {
-    text-align: center;
-    font-weight: bold;
-    color: #007baf;
+.image-row img {
+    object-fit: cover; /* Verhindert Verzerrung */
 }
 
-/* PFEIL UNTEN RECHTS */
-.back-to-top {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    font-size: 24px;
-    text-decoration: none;
-    color: black;
+/* Listen */
+ul {
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px;
 }
