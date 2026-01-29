@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    background-color: #E3E3E3;
+    font-family: Bahnschrift, Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+    position: relative;
+    padding: 20px;
+}
+
+h1 {
+    font-family: "Calisto MT", serif;
+    color: #007baf;
+    margin: 0;
+}
+
+/* LOGO */
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 50px;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: #007baf;
+    padding: 8px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* INHALT */
+main {
+    padding: 20px;
+}
+
+h2 {
+    font-family: "Calisto MT", serif;
+    color: #007baf;
+}
+
+/* BILDER */
+.bilderreihe {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.bilderreihe img {
+    margin: 5px;
+}
+
+/* ABSCHLUSS */
+.abschluss {
+    text-align: center;
+    font-weight: bold;
+    color: #007baf;
+}
+
+/* PFEIL UNTEN RECHTS */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+}
