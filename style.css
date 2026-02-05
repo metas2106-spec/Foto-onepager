@@ -1,90 +1,132 @@
-/* Globale Einstellungen */
+/* --- Variablen für Farben --- */
+:root {
+    --bg: #ffffff;
+    --text: #333333;
+    --blue: #0076aa; /* Das Steyr-Blau */
+    --header-bg: #f8f9fa;
+    --footer-bg: #f8f9fa;
+}
+
+body.dark-mode {
+    --bg: #121212;
+    --text: #e0e0e0;
+    --blue: #4fb3ff;
+    --header-bg: #1f1f1f;
+    --footer-bg: #1f1f1f;
+}
+
+/* --- Grundlayout für PC --- */
 body {
-    background-color: #E3E3E3; /* Vorgabe Hintergrundfarbe Seite */
-    font-family: 'Bahnschrift', sans-serif; /* Vorgabe Fließtext & Navi */
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Header & Logo */
-header {
-    position: relative;
-    padding: 20px;
-    background-color: white;
-}
-
-.logo {
-    position: absolute; /* Positionierung rechts oben */
-    top: 10px;
-    right: 20px;
-    height: 60px;
-}
-
-/* Navigation */
-nav {
-    background-color: #007baf; /* Vorgabe Hintergrundfarbe Navi */
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
+/* Container zentriert den Inhalt auf breiten Bildschirmen */
+.container, .header-content, .nav-content {
+    max-width: 1200px;
+    margin: 0 auto; /* Zentriert horizontal */
     padding: 0 20px;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 25px;
+/* --- Header & Navi --- */
+header {
+    background-color: var(--header-bg);
+    padding: 20px 0;
+    border-bottom: 3px solid var(--blue);
 }
 
-nav ul li a {
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 { margin: 0; color: var(--blue); }
+
+.header-right { display: flex; align-items: center; gap: 20px; }
+.logo { height: 60px; }
+
+nav {
+    background-color: var(--blue);
+    padding: 15px 0;
+}
+
+nav a {
     color: white;
     text-decoration: none;
+    margin-right: 25px;
     font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.2s;
 }
+nav a:hover { color: #cce5ff; }
 
-/* Hauptinhalt */
-main {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
-}
+/* --- Hauptinhalt & Bilder --- */
+main { padding: 40px 0; }
 
-/* Überschriften */
-h1 {
-    font-family: 'Calisto MT', serif; /* Vorgabe Schriftart Überschriften */
-    color: #007baf;
-    margin: 0;
-}
+h2 { color: var(--blue); border-bottom: 2px solid var(--blue); padding-bottom: 10px; display: inline-block;}
+p, li { line-height: 1.6; font-size: 1.1rem; }
+ul { margin-bottom: 30px; }
+li { margin-bottom: 10px; }
 
-h2 {
-    font-family: 'Calisto MT', serif;
-    color: #007baf;
-}
-
-.blue-bg {
-    background-color: #007baf;
-    color: white;
-    padding: 5px 10px;
-}
-
-/* Bilder-Layout: 3 nebeneinander */
-.image-row {
+/* Bilder nebeneinander auf PC */
+.bilder-reihe {
     display: flex;
-    justify-content: center; /* Zentriert die Bildergruppe */
-    gap: 15px; /* Abstand zwischen den Bildern */
-    margin: 20px 0;
+    justify-content: space-between; /* Verteilt Platz zwischen Bildern */
+    gap: 20px; /* Abstand zwischen Bildern */
+    margin: 30px 0;
 }
 
-.image-row img {
-    object-fit: cover; /* Verhindert Verzerrung */
+.bilder-reihe img {
+    width: 32%; /* 3 Bilder nebeneinander */
+    height: 200px; /* Einheitliche Höhe */
+    object-fit: cover; /* Bilder werden nicht verzerrt */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.bilder-reihe img:hover { transform: scale(1.03); }
+.abschluss { font-weight: bold; margin-top: 40px; color: var(--blue); }
+
+/* --- Button Styling --- */
+#theme-toggle {
+    padding: 10px 20px;
+    background-color: var(--blue);
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+#theme-toggle:hover { background-color: white; color: var(--blue); border-color: var(--blue); }
+body.dark-mode #theme-toggle { border-color: var(--blue); }
+
+/* --- Footer und Pfeil --- */
+footer {
+    background-color: var(--footer-bg);
+    padding: 20px;
+    text-align: center; /* Zentriert den Pfeil */
+    margin-top: 40px;
 }
 
-/* Listen */
-ul {
-    margin-bottom: 20px;
+.top-link {
+    display: inline-block;
+    transition: transform 0.3s;
 }
+.top-link:hover { transform: translateY(-5px); /* Kleiner Hüpfer beim Drüberfahren */ }
 
-li {
-    margin-bottom: 10px;
+/* WICHTIG: Größe des Pfeil-Bildes */
+.pfeil-img {
+    width: 40px; /* Größe anpassen wie gewünscht */
+    height: auto;
+    cursor: pointer;
 }
+/* Im Dark Mode den Pfeil invertieren, damit man ihn sieht (falls es ein schwarzer Pfeil ist) */
+body.dark-mode .pfeil-img {
+    filter: invert(1);
+}   
