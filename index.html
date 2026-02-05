@@ -2,81 +2,72 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romantikstadt Steyr</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body id="top">
 
 <header>
-    <h1>Willkommen in Steyr</h1>
-    <img src="logo steyr.png" alt="Logo Stadt Steyr" class="logo">
+    <div class="header-content">
+        <h1>Willkommen in Steyr</h1>
+        <div class="header-right">
+            <img src="bilder/logo steyr.png" alt="Logo Stadt Steyr" class="logo">
+            <button id="theme-toggle">Dunkel-Modus</button>
+        </div>
+    </div>
 </header>
 
 <nav>
-    <a href="https://www.steyr-nationalpark.at/orte/region/gastronomie-steyr.html">Gastronomie</a>
-    <a href="https://www.steyr-nationalpark.at/orte/region/unterkuenfte-steyr.html">Unterkünfte</a>
-    <a href="https://www.steyr-nationalpark.at/advent.html">Advent in Steyr</a>
-    <a href="https://www.steyr-nationalpark.at/orte/region/steyr-am-fluss-der-zeit/oesterreich-angebot/detail/7720/steyrer-augenblicke.html">Steyr Moments</a>
+    <div class="nav-content">
+        <a href="https://www.steyr-nationalpark.at/orte/region/gastronomie-steyr.html">Gastronomie</a>
+        <a href="https://www.steyr-nationalpark.at/orte/region/unterkuenfte-steyr.html">Unterkünfte</a>
+        <a href="https://www.steyr-nationalpark.at/advent.html">Advent in Steyr</a>
+        <a href="https://www.steyr-nationalpark.at/orte/region/steyr-am-fluss-der-zeit/oesterreich-angebot/detail/7720/steyrer-augenblicke.html">Steyr Moments</a>
+    </div>
 </nav>
 
 <main>
+    <div class="container">
+        <h2>Steyr am Nationalpark – natürlich romantisch!</h2>
+        <p>Steyr am Nationalpark, reich an Kultur, Industrie, Natur und Architektur ist eine lebens-
+        und liebenswerte Kleinstadt. Die 1000-jährige Stadt liegt inmitten der Österreichischen
+        Romantikstraße zwischen Salzburg und Wien und ist ein wahres Architekturjuwel.</p>
 
-<h2>Steyr am Nationalpark – natürlich romantisch!</h2>
+        <p>Am historischen Stadtplatz reihen sich Bürgerhäuser aus verschiedenen Stilepochen
+        harmonisch aneinander. Malerisch ist der Zusammenfluss von Enns und Steyr unterhalb
+        des Schlosses.</p>
 
-<p>
-Steyr am Nationalpark, reich an Kultur, Industrie, Natur und Architektur ist eine lebens-
-und liebenswerte Kleinstadt. Die 1000-jährige Stadt liegt inmitten der Österreichischen
-Romantikstraße zwischen Salzburg und Wien und ist ein wahres Architekturjuwel.
-</p>
+        <div class="bilder-reihe">
+            <img src="bilder/stadtplatz.jpg" alt="Stadtplatz Steyr">
+            <img src="bilder/stadttor.jpg" alt="Stadttor">
+            <img src="bilder/zweifluesseestadt.jpg" alt="Zweiflüssestadt">
+        </div>
 
-<p>
-Am historischen Stadtplatz reihen sich Bürgerhäuser aus verschiedenen Stilepochen
-harmonisch aneinander. Malerisch ist der Zusammenfluss von Enns und Steyr unterhalb
-des Schlosses.
-</p>
+        <h2>In Steyr ist immer was los – entscheiden Sie sich für eine dieser Aktivitäten:</h2>
+        <ul>
+            <li><strong>Vom höchsten Turm in den tiefsten Keller:</strong> Begleiten Sie die Steyrer Nachtwächter auf Zeitreise in die Vergangenheit.</li>
+            <li><strong>Steyr erschweben:</strong> Der Sprung vom Mittelalter ins Hightech-Zeitalter gelingt lautlos auf dem Segway.</li>
+            <li><strong>Ein Eldorado für Naturliebhaber:</strong> In nur 30 Minuten erreicht man den Nationalpark Kalkalpen.</li>
+            <li><strong>Advent in Steyr:</strong> Steyr wird zur offiziellen Christkindlstadt Österreichs.</li>
+        </ul>
 
-<!-- Erste Bildreihe -->
-<div class="bilder">
-    <img src="stadtplatz.jpg" height="170" alt="Stadtplatz Steyr">
-    <img src="stadttor.jpg" height="170" alt="Stadttor">
-    <img src="zweifluesseestadt.jpg" height="170" alt="Zweiflüssestadt">
-</div>
+        <div class="bilder-reihe">
+            <img src="bilder/nachtwaechter.jpg" alt="Nachtwächter">
+            <img src="bilder/panoramalift.jpg" alt="Panoramalift">
+            <img src="bilder/christkindl.jpg" alt="Christkindl">
+        </div>
 
-<h2>In Steyr ist immer was los – entscheiden Sie sich für eine dieser Aktivitäten:</h2>
-
-<ul>
-    <li><strong>Vom höchsten Turm in den tiefsten Keller</strong><br>
-        Begleiten Sie die Steyrer Nachtwächter auf Zeitreise in die Vergangenheit.</li>
-
-    <li><strong>Steyr erschweben</strong><br>
-        Der Sprung vom Mittelalter ins Hightech-Zeitalter gelingt lautlos auf dem Segway.</li>
-
-    <li><strong>Ein Eldorado für Naturliebhaber</strong><br>
-        In nur 30 Minuten erreicht man den Nationalpark Kalkalpen.</li>
-
-    <li><strong>Advent in Steyr</strong><br>
-        Steyr wird zur offiziellen Christkindlstadt Österreichs.</li>
-</ul>
-
-<!-- Zweite Bildreihe -->
-<div class="bilder">
-    <img src="nachtwaechter.jpg" height="185" alt="Nachtwächter">
-    <img src="panoramalift.jpg" height="185" alt="Panoramalift">
-    <img src="christkindl.jpg" height="185" alt="Christkindl">
-</div>
-
-<p class="abschluss">
-    Es gibt viel zu entdecken bei uns, wir freuen uns auf Ihren Besuch!
-</p>
-
+        <p class="abschluss">Es gibt viel zu entdecken bei uns, wir freuen uns auf Ihren Besuch!</p>
+    </div>
 </main>
 
 <footer>
-    <a href="#top">
-        <img src="pfeil.png" alt="Nach oben" class="pfeil">
+    <a href="#top" class="top-link">
+        <img src="bilder/pfeil.png" alt="Nach oben scrollen" class="pfeil-img">
     </a>
 </footer>
 
+<script src="js/script.js"></script>
 </body>
 </html>
